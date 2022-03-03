@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { RoutingModule } from './app.routing.module';
 import { MessagingModule } from './messaging/messaging.module';
 import { PagesModule } from './pages/pages.module';
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { PagesModule } from './pages/pages.module';
     PagesModule,
     NbLayoutModule,
     NbActionsModule,
-    NbCardModule
+    NbCardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

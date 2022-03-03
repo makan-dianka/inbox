@@ -31,7 +31,10 @@
   .navbar{
     background-color: whitesmoke;
     box-shadow: -2px 10px 5px rgba(0,0,0,0.2);
-  
+  }
+
+  .navbar h2 {
+    margin-left: 50px;
   }
   
   .titre{
@@ -63,4 +66,8 @@
 
   .msg-title {
     color: blue;
+  }
+
+  .btn-btn {
+    margin-right: 50px;
   }

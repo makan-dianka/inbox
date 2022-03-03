@@ -6,9 +6,11 @@
           <label class="form-label">Titre</label>
           <input class="w-100 form-control"
           [(ngModel)]="m.title" type="text" name="title" id="title">
+
           <label class="form-label">Message</label>
           <textarea class="w-100 form-control"
            [(ngModel)]="m.content" name="content" id="content" rows="5"></textarea> <br />
+           
            <button (click)="addNewMessage()" type="button" class="btn btn-success">Envoyer</button>
         </div>
       </div>

@@ -1,12 +1,10 @@
 <div class="container-fluid">
-
     <h2 class="text-center msg-title">Messages</h2>
-
     <app-message
         *ngFor="let message of messages"
         [data]="message"
         (remove)="delete($event)">
     </app-message>
 <br /> <br /> <br /> <br />
-</div>
 
+</div>

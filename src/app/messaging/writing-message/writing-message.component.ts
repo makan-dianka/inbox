@@ -9,12 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WritingMessageComponent implements OnInit {
 
-  m: MessageType = {
-    content: '',
-    title: '',
-    sent : new Date(),
-    isRead: false
-  };
+  m!: MessageType;
 
   constructor(
     private service: DataMessagesService

@@ -26,7 +26,9 @@ export class InboxComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.messages = this.myService.getMessages();
+    this.myService.getObservableMessages().subscribe((datas)=>{
+      this.messages = datas
+    })
 
   }
 
@@ -34,6 +36,4 @@ export class InboxComponent implements OnInit {
   delete(message: MessageType){
     this.messages.splice(this.messages.indexOf(message),1);
   }
-
 }
-
