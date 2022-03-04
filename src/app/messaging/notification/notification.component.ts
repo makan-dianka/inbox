@@ -16,29 +16,5 @@ export class NotificationComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-  //   this.service
-  //   .getObservableMessages()
-  //   .pipe(
-  //     map((msg, idx)=>{ return msg.filter((m)=>{
-  //         return !m.isRead
-  //       }).length
-  //     })
-  //   )
-  //   .subscribe( datas => this.notReadMessages = datas)
-  // }
-
-  // this.service
-  // .getUnReadMessageAsObservable()
-  // .subscribe(unRedMessages => this.notReadMessages = unRedMessages.length)
-  // repeat()
-  // }
-
-  this.service
-  .getCountOfUnReadMessages()
-  .subscribe(n => this.notReadMessages = n)
-  }
-
-  count() {
-    return this.notReadMessages
   }
 }

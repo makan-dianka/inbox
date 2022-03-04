@@ -1,10 +1,14 @@
 <div class="container-fluid">
     <h2 class="text-center msg-title">Messages</h2>
-    <app-message
-        *ngFor="let message of messages"
-        [data]="message"
-        (remove)="delete($event)">
-    </app-message>
-<br /> <br /> <br /> <br />
 
+    <div>
+        <div class="container" *ngFor='let m of Messages'>
+          <h2>{{m.title}}</h2>
+          <p>{{m.content}}</p>
+          <p class="date">{{m.sent}}</p>
+          <a ref="#" class="btn btn-danger">Delete</a> &nbsp;&nbsp;&nbsp;
+          <a  ref="#" class="btn btn-primary">Update</a>
+          <hr>
+        </div>
+      </div> 
 </div>

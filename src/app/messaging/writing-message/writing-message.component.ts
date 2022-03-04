@@ -1,5 +1,4 @@
 import { DataMessagesService } from './../services/data-message.service';
-import { MessageType } from './../inbox/inbox.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,24 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WritingMessageComponent implements OnInit {
 
-  m!: MessageType;
-
   constructor(
     private service: DataMessagesService
   ) { }
 
   ngOnInit(): void {
-    this.m =  {
-      content: '',
-      title: '',
-      sent : new Date(),
-      isRead: false
-    }
 
-  }
 
-  addNewMessage(){
-   console.log(this.m);
-    this.service.createMessages(this.m);
   }
 }
