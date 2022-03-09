@@ -6,6 +6,7 @@ import { RoutingModule } from './app.routing.module';
 import { MessagingModule } from './messaging/messaging.module';
 import { PagesModule } from './pages/pages.module';
 import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http'
     NbLayoutModule,
     NbActionsModule,
     NbCardModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

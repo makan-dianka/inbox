@@ -3,12 +3,12 @@
 
     <div>
         <div class="container" *ngFor='let m of Messages'>
-          <h2>{{m.title}}</h2>
+          <h2>{{m.title}} {{m.id}}</h2>
           <p>{{m.content}}</p>
           <p class="date">{{m.sent}}</p>
-          <a ref="#" class="btn btn-danger">Delete</a> &nbsp;&nbsp;&nbsp;
-          <a  ref="#" class="btn btn-primary">Update</a>
+          <p><a [routerLink]="['/message', m.id]" routerLinkActive="active">Detail</a></p>
           <hr>
         </div>
+        <br /> <br />
       </div> 
 </div>

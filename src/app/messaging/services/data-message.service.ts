@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators'
+import { catchError, map } from 'rxjs/operators'
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -8,14 +8,34 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class DataMessagesService {
 
-  // HEADERS = new HttpHeaders({
-  //   'content-type' : 'application/json',
-  // })
 
   constructor(private http: HttpClient) {
    }
 
-   getMessages() {
-     return this.http.get('http://127.0.0.1:4444/api')
+   // page d'authentication
+   auth(userData: any) {
+     return this.http.post("http://localhost:4444/login", userData)
    }
+
+   // l'envoie de requete vers le backend pour recuperer les messages
+   getMessages(): Observable<any[]> {
+     return this.http.get<any[]>('http://127.0.0.1:4444/messages')
+   }
+
+   // suppression
+   delete(id: number){
+    return this.http.delete<any>(`http://localhost:4444/message/del/${id}`)
+  }
+
+  // ajout de new msg
+  newMessage(newMsg: any): Observable<any>{
+    return this.http.post<any>('http://localhost:4444/message/new', newMsg)
+  }
+
+  // update message
+  public updateMessage(updateMsg: any): Observable<any>{
+    const url = `http://localhost:4444/message/${updateMsg.id}`
+    return this.http.put<any>(url, updateMsg).pipe()
+  }
+
 }

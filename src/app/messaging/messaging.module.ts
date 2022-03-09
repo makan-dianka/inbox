@@ -7,6 +7,9 @@ import { WritingMessageComponent } from './writing-message/writing-message.compo
 import { MessageComponent } from './message/message.component';
 import { FormsModule } from '@angular/forms';
 import { NbActionsModule, NbCardModule, NbLayoutModule } from '@nebular/theme';
+import { MessagingDetailsComponent } from './messaging-details/messaging-details.component';
+import { RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -16,7 +19,9 @@ import { NbActionsModule, NbCardModule, NbLayoutModule } from '@nebular/theme';
     NotificationComponent,
     WritingMessageComponent,
     MessageComponent,
-    NotificationComponent
+    NotificationComponent,
+    MessagingDetailsComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +29,8 @@ import { NbActionsModule, NbCardModule, NbLayoutModule } from '@nebular/theme';
     NbLayoutModule,
     NbActionsModule,
     NbLayoutModule,
-    NbCardModule
+    NbCardModule,
+    RouterModule
   ],
   exports: [
     InboxComponent,
