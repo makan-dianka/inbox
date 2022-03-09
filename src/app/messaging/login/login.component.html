@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        
+        <div class="col-4"></div>
+        <div class="col-4">
+            <br /> <br />
+            <h2>Se connecter</h2>
+            <br />
+            <form #userData="ngForm" (ngSubmit)="loginForm(userData.value)">
+                <div class="mb-3">
+                    <label class="form-label">Votre email</label>
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ngModel>
+                </div>
+            
+                <div class="mb-3">
+                    <label  class="form-label">Mot de passe</label>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" ngModel>
+                </div>
+            
+                <button type="submit" class="btn btn-primary">Se connecter</button>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+

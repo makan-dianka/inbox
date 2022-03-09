@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <h2 class="text-center msg-title">Message</h2>
+
+    <div>
+        <div class="container">
+          <h2>{{message.title}} {{message.id}}</h2>
+          <p>{{message.content}}</p>
+          <p class="date">{{message.sent}}</p>
+          <button type="button" class="btn btn-danger" (click)="deleteMessage()">Delete</button> &nbsp;&nbsp;&nbsp; 
+          <br /> <br /> 
+          <!-- <a  ref="#" class="btn btn-primary">Update</a> <br /> <br /> <br /> <br /> -->
+          <button class="btn btn-outline-info d-flex" (click)="back()">
+            <span class="material-icons">Retour vers Messages</span>
+            
+          </button>
+        </div>
+        
+      </div> 
+</div>
