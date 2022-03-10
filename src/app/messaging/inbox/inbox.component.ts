@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class InboxComponent implements OnInit {
 
   title: string = 'TITRE';
-  Messages: any;
+  Messages: any
   err!: string;
 
   constructor(

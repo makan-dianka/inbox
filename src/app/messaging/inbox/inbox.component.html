@@ -2,11 +2,11 @@
     <h2 class="text-center msg-title">Messages</h2>
 
     <div>
-        <div class="container" *ngFor='let m of Messages'>
-          <h2>{{m.title}} {{m.id}}</h2>
-          <p>{{m.content}}</p>
-          <p class="date">{{m.sent}}</p>
-          <p><a [routerLink]="['/message', m.id]" routerLinkActive="active">Detail</a></p>
+        <div class="container" *ngFor='let msg of Messages'>
+          <h2>{{msg.title}} {{msg.id}}</h2>
+          <p>{{msg.content}}</p>
+          <p class="date">{{msg.sent}}</p>
+          <p><a [routerLink]="['/message', msg.id]" routerLinkActive="active">Detail</a></p>
           <hr>
         </div>
         <br /> <br />

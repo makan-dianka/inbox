@@ -5,6 +5,8 @@
         <div class="col-4">
             <br /> <br />
             <h2>Se connecter</h2>
+            <p class="inc">{{ incorrect }}</p>
+            <span class="val">{{ valide }}</span>
             <br />
             <form #userData="ngForm" (ngSubmit)="loginForm(userData.value)">
                 <div class="mb-3">
