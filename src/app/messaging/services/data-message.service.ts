@@ -20,8 +20,7 @@ export class DataMessagesService {
 
    // l'envoie de requete vers le backend pour recuperer les messages
    getMessages(): Observable<any[]> {
-     let token = localStorage.getItem("autorization") 
-     console.log(token)
+     let token = localStorage.getItem('autorization');
      return this.http.get<any[]>('http://127.0.0.1:4445/messages')
    }
 
