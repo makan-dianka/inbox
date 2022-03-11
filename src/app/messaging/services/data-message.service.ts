@@ -15,13 +15,14 @@ export class DataMessagesService {
 
    // page d'authentication
    auth(userData: any) {
-     return this.http.post("http://localhost:4445/login", userData, {responseType: 'text', observe: 'response'} )
+     return this.http.post("http://localhost:4444/login", userData, {responseType: 'text', observe: 'response'} )
    }
 
    // l'envoie de requete vers le backend pour recuperer les messages
    getMessages(): Observable<any[]> {
-     let token = localStorage.getItem('autorization');
-     return this.http.get<any[]>('http://127.0.0.1:4445/messages')
+      let token = localStorage.getItem('autorization');
+      let headers = new HttpHeaders().append("auth", `${token}`)
+      return this.http.get<any[]>('http://127.0.0.1:4444/messages', {headers: headers})
    }
 
    // suppression
